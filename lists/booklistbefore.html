@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        nav{
+            padding-left: 100px!important;
+            padding-right: 100px!important;
+            background: #6665ee;
+            font-family: 'Poppins', sans-serif;
+        } 
+        nav a.navbar-brand{
+            color: #fff;
+            font-size: 30px!important;
+            font-weight: 500;
+        }
+         
+        button a{
+            color: #6665ee;
+            font-weight: 500;
+        }
+        button a:hover{
+            text-decoration: none;
+        }
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block; 
+    }
+    .footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+        
+        .footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">My List</a>
+            <div class="dropdown">
+                <span class="btn btn-light">Lists</span>
+                <div class="dropdown-content">
+                    <button type="button" class="btn btn-light"><a href="./booklistbefore.html">MyBookList</a></button>
+                    <button type="button" class="btn btn-light"><a href="./movielistbefore.html">MyMovieList</a></button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="btn btn-light">Login/Signup</span>
+                <div class="dropdown-content">
+                    <button type="button" class="btn btn-light"><a href="../signup-user.php">Register</a></button>
+                    <button type="button" class="btn btn-light"><a href="../login-user.php">Login</a></button>
+                </div>
+    
+            </div>  
+        </nav>   
+        <div class="container mt-4">
+            <h1 class="display-4 text-center">
+                <i class="bi bi-book"></i> My<span class="text-primary">Book</span>List
+            </h1>
+              <form id="book-form">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="author">Author</label>
+                  <input type="text" id="author" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="isbn">ISBN#</label>
+                  <input type="text" id="isbn" class="form-control" required>
+                </div><br>
+                <input type="submit" value="Add Book" class="btn btn-primary btn-block" onclick="myFunction()" >
+              </form>
+              <table class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN#</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+              </table>
+          </div>
+          <div class="footer-dark" style="padding: 50px 0; color:#f0f9ff; background-color:#282d32;">
+            <footer>
+                <div class="container"style="text-align: center;">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2 item">
+                            <h3 style="margin-top:0; margin-bottom:12px; font-weight:bold; font-size:16px;" >Services</h3>
+                            <ul style="padding:0; list-style:none; line-height:1.6; font-size:14px; margin-bottom:0; ">
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Web design</a></li>
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Development</a></li>
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Hosting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-2 item">
+                            <h3 style="margin-top:0; margin-bottom:12px; font-weight:bold; font-size:16px;">About</h3>
+                            <ul style="padding:0; list-style:none; line-height:1.6; font-size:14px; margin-bottom:0;">
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Company</a></li>
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Team</a></li>
+                                <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="#">Careers</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-2 item">
+                          <h3 style="margin-top:0; margin-bottom:12px; font-weight:bold; font-size:16px;">Join Us</h3>
+                          <ul style="padding:0; list-style:none; line-height:1.6; font-size:14px; margin-bottom:0;">
+                              <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="./signup-user.php">Sign-up</a></li>
+                              <li><a style="color:inherit; text-decoration:none; opacity:0.6; " href="./login-user.php">Sign-in</a></li>
+                          </ul>
+                      </div>
+                        <div class="col-md-6 item text">
+                            <h3 style="margin-top:0; margin-bottom:12px; font-weight:bold; font-size:16px;">Contact Us</h3>
+                            <p><b>Address:</b> B-19 Anand Nagar, Makrana<br>Nagaur, Rajasthan<br><b>Website:</b><a href="#"> www.idearoute.com</a></p>
+                        </div>
+                        <div class="col item social">
+                          <p style="text-align: center;"><img src="./img/logo.jpeg" width="100px" height="100px" style="border-radius: 50px ;"></p><br>
+                          <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        </div>
+                    </div>
+                    <p class="copyright">IdeaRoute © 2018</p>
+                </div>
+            </footer>
+        </div> 
+        <script>
+            function myFunction(){
+                alert("Please login or register to create your own book list!!");
+            }
+        </script>
+    </body>
+</html>
